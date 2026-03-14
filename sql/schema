@@ -9,7 +9,6 @@ CREATE TABLE Spese (
     importo DECIMAL(10,2) NOT NULL,
     descrizione VARCHAR(255),
     id_categoria INT,
-    -- Vincoli richiesti dall'elaborato
     CONSTRAINT chk_importo_positivo CHECK (importo > 0),
     FOREIGN KEY (id_categoria) REFERENCES Categorie(id_categoria)
 );
