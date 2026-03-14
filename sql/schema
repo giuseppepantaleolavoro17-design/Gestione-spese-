@@ -23,7 +23,6 @@ CREATE TABLE Budget (
     FOREIGN KEY (id_categoria) REFERENCES Categorie(id_categoria)
 );
 
--- Inserimenti iniziali per popolamento database
 INSERT INTO Categorie (nome) VALUES ('Alimentari'), ('Affitto'), ('Svago');
 INSERT INTO Spese (data_spesa, importo, id_categoria, descrizione) 
 VALUES (CURDATE(), 25.00, 1, 'Spesa cena');
